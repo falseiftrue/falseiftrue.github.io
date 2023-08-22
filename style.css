@@ -1,17 +1,23 @@
 body {
-    margin: atuauto;
-    background-color: rgb(201, 177, 137);
-    font: helvetica;
+    background-color: #F4F3EE;
+
 }
 
 .box {
     margin: auto;
-    border: 3px solid black;
-    border-radius: 10px;
-    padding: 15px;
-    width: 50%;
-    display: flex;
-    gap: 16px;
+    border: 1.5px solid black;
+    border-radius: 5px;
+    padding: 10px;
+    width: 80%;
   }
   
-  .grow1 { flex-grow: 1; }
+h1 {
+    font-family: "Archivo Black";
+    margin-bottom: 2px;
+}
+
+.sub {
+    font-family: sans-serif;
+    font-size: 14px;
+    padding-left: 2px;
+}

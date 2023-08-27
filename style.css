@@ -1,7 +1,8 @@
 body {
     background-color: #F4F3EE;
-    padding-top: 50px;
-    width: 40%;
+    padding-top: 70px;
+    width: 35%;
+    min-width: 470px;
     height: 100%;
     margin: auto;
     font-family: sans-serif;

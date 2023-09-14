@@ -55,3 +55,10 @@ img {
 a {
     color: rgb(0, 48, 0);
 }
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    body {
+        width: 80%;
+    }
+  }

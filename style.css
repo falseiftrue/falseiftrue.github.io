@@ -1,7 +1,7 @@
 body {
     background-color: #F4F3EE;
-    margin: 20%;
-    min-width: 300px;
+    margin: 10%;
+
     font-family: IBM Plex Mono,ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
 }
 
@@ -53,8 +53,8 @@ a {
     color: rgb(0, 48, 0);
 }
 
-/* @media print, screen and (min-width: 768px){
+@media print, screen and (min-width: 768px){
     body{
         margin: 20%
     }
-} */
+}

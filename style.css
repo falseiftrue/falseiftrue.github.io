@@ -5,7 +5,7 @@ body {
     min-width: 470px;
     height: 100%;
     margin: auto;
-    font-family: sans-serif;
+    font-family: IBM Plex Mono,ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
 }
 
 #flexiana {

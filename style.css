@@ -12,7 +12,7 @@ body {
     justify-content: center;
     align-items: stretch;
     gap: 5px;
-    height: 97.47px;
+    /* height: 97.47px; */
 }
 
 #box {
@@ -53,8 +53,14 @@ a {
     color: rgb(0, 48, 0);
 }
 
-@media print, screen and (min-width: 768px){
+@media print, screen and (min-width: 768px) and (max-width: 1250px){
     body{
         margin: 20%
+    }
+}
+
+@media print, screen and (min-width: 1250px){
+    body{
+        margin: 25%
     }
 }

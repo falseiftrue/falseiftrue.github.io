@@ -67,6 +67,7 @@ nav .active:hover {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
+    text-wrap: nowrap;
     justify-content: center;
     align-items: stretch;
     /* text-align: center; */

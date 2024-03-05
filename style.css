@@ -3,9 +3,13 @@
 }
 
 :root {
-    --green: rgb(3, 73, 3);
+    --green: #034903;
+    --pink: #713E5A;
+    --blue: #05668D;
+    --yellow: #aa7e05;
     --white: #F4F3EE;
-    font-size: 12pt;
+    --accent: var(--green);
+    font-size: 13pt;
 }
 
 body, html {
@@ -17,17 +21,20 @@ body, html {
 body {
     background-color: var(--white);
     height: 100%;
-    font-family: IBM Plex Mono,ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
+    font-family: 'JetBrains Mono', IBM Plex Mono,ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
     display: flex;
     place-content: center;
 }
 
 #container {
     /* border: 2px red solid; */
-    margin: 10%;
+    margin: 4%;
+    margin-bottom: 0;
     max-width: 70ch;
-    width: 70ch;
-    text-align: justify;
+    width: auto;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
 }
 
 .text-container {
@@ -38,29 +45,32 @@ nav {
     display: flex;
     justify-content: center;
     gap: 10px;
-    margin-bottom: 5px;
+    margin-bottom: 8px;
 }
 
 nav a {
     background-color: black;
-    border: 1pt black solid;
+    border: 1px black solid;
     padding: 2px;
     text-decoration: none;
 }
 
 nav a:hover {
-    color: black;
+    color: var(--accent);
+    border: 1px solid var;
 }
 
 nav .active {
-    background-color: var(--green);
-    border: 1px solid var(--green);
+    background-color: var(--accent);
+    transition: background-color 0.4s ease;
+    border: 1px solid var(--accent);
     color: #F4F3EE;
 }
 
 nav .active:hover {
     color: var(--white);
-    background-color: var(--green);
+    background-color: var(--accent);
+    transition: background-color 0.4s ease;
 }
 
 #flexiana {
@@ -97,7 +107,12 @@ h1 {
 }
 
 ul {
-    list-style: circle;
+    list-style: none;
+    line-height: 2;
+}
+
+li {
+    font-weight: bolder;
 }
 
 img {
@@ -111,20 +126,147 @@ img {
 
 a {
     color: var(--white);
-    background-color: var(--green);
-    border: 1pt var(--green) solid;
+    background-color: var(--accent);
+    transition: background-color 0.4s ease;
+    border: 1pt solid var(--accent) ;
     border-radius: 3px;
-    padding: 2px;
+    padding: 1px;
     text-decoration: double;
 }
 
 a:hover {
     background-color: var(--white);
-    color: var(--green);
+    color: var(--accent);
+    border: 1px solid var(--accent);
 }
 
-@media screen and (max-width: 400px) {
+#card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 25px;
+}
+
+.card {
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 22%;
+    box-sizing: border-box;
+    max-width: 250px;
+}
+
+.card img {
+    border-radius: 5px;
+    margin-bottom: 6px;
+    width: 100%;
+    aspect-ratio: 1/1;
+}
+
+blockquote {
+
+    border: 1px solid var(--accent);
+    background-color: var(--accent);
+    line-height: 1.2;
+    color: var(--white);
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.footer-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    place-content: end;
+    place-items: center;
+}
+
+footer {
+    color: var(--accent);
+    font-size: small;
+    text-align: center;
+    justify-self: self-end;
+}
+
+footer a {
+    background: none;
+    color: var(--accent);
+    transition: background-color 0.4s ease;
+}
+
+footer a:hover {
+    background-color: var(--accent);
+    color: var(--white)
+}
+
+button {
+    color: var(--white);
+    border: none;
+    cursor: pointer;
+    border-radius: 2px;
+}
+
+
+#portrait {
+    transition: background-color 0.4s ease, opacity 0.4s;
+}
+
+#blueButton {
+    background-color: var(--blue);
+}
+
+#greenButton {
+    background-color: var(--green);
+}
+
+#yellowButton {
+    background-color: var(--yellow);
+}
+
+#pinkButton {
+    background-color: var(--pink);
+}
+
+@media screen and (max-width: 768px) {
+    #container {
+        margin: 4% 1%; /* Less margin on the sides for mobile */
+        max-width: 90%; /* Allow container to fill the screen as needed */
+    }
+}
+
+@media screen and (max-width: 450px) {
+    /* Additional adjustments for very small screens */
+    #container {
+        margin: 4% 6%; /* Even less margin for very small devices */
+        max-width: 90%;
+    }
+
+    body, html {
+        font-size: 12pt; /* You might want to scale down the font size */
+    }
+
+    h1 {
+        font-size: 18pt; /* Scale down headings appropriately */
+    }
+
+    img {
+        width: 80px;
+        height: 100%;
+    }
+    .card {
+        width: 48%; /* Adjust card sizes to fit the small screen */
+    }
+}
+
+/* @media screen and (max-width: 450px) {
+
     nav {
         justify-content: space-between;
     }
-}
+
+    #container {
+        margin: 20%;
+    }
+} */

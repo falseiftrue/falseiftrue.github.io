@@ -21,7 +21,7 @@ body, html {
 body {
     background-color: var(--white);
     height: 100%;
-    font-family:  "Inconsolata", "DM Mono", monospace;
+    font-family:  "Hack", "Inconsolata", "DM Mono", monospace;
     display: flex;
     place-content: center;
 }

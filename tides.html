@@ -1,401 +1,3 @@
-Last login: Sun Apr 27 15:32:50 on ttys000
-flameiro@m-gvfjf3pqx3 ~ % ls
-Desktop			Library			Personal and Private
-Documents		Movies			Pictures
-Downloads		Music			Public
-flameiro@m-gvfjf3pqx3 ~ % git
-usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]
-           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
-           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]
-           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
-           [--super-prefix=<path>] [--config-env=<name>=<envvar>]
-           <command> [<args>]
-
-These are common Git commands used in various situations:
-
-start a working area (see also: git help tutorial)
-   clone     Clone a repository into a new directory
-   init      Create an empty Git repository or reinitialize an existing one
-
-work on the current change (see also: git help everyday)
-   add       Add file contents to the index
-   mv        Move or rename a file, a directory, or a symlink
-   restore   Restore working tree files
-   rm        Remove files from the working tree and from the index
-
-examine the history and state (see also: git help revisions)
-   bisect    Use binary search to find the commit that introduced a bug
-   diff      Show changes between commits, commit and working tree, etc
-   grep      Print lines matching a pattern
-   log       Show commit logs
-   show      Show various types of objects
-   status    Show the working tree status
-
-grow, mark and tweak your common history
-   branch    List, create, or delete branches
-   commit    Record changes to the repository
-   merge     Join two or more development histories together
-   rebase    Reapply commits on top of another base tip
-   reset     Reset current HEAD to the specified state
-   switch    Switch branches
-   tag       Create, list, delete or verify a tag object signed with GPG
-
-collaborate (see also: git help workflows)
-   fetch     Download objects and refs from another repository
-   pull      Fetch from and integrate with another repository or a local branch
-   push      Update remote refs along with associated objects
-
-'git help -a' and 'git help -g' list available subcommands and some
-concept guides. See 'git help <command>' or 'git help <concept>'
-to read about a specific subcommand or concept.
-See 'git help git' for an overview of the system.
-flameiro@m-gvfjf3pqx3 ~ % git clone https://github.com/falseiftrue/falseiftrue.github.io.git
-Cloning into 'falseiftrue.github.io'...
-remote: Enumerating objects: 170, done.
-remote: Counting objects: 100% (170/170), done.
-remote: Compressing objects: 100% (122/122), done.
-remote: Total 170 (delta 76), reused 126 (delta 42), pack-reused 0 (from 0)
-Receiving objects: 100% (170/170), 10.64 MiB | 19.42 MiB/s, done.
-Resolving deltas: 100% (76/76), done.
-flameiro@m-gvfjf3pqx3 ~ % ls
-Desktop			Library			Pictures
-Documents		Movies			Public
-Downloads		Music
-falseiftrue.github.io	Personal and Private
-flameiro@m-gvfjf3pqx3 ~ % cd falseiftrue.github.io
-flameiro@m-gvfjf3pqx3 falseiftrue.github.io % ls
-books.html	colors.js	images		README.md	style.css
-CNAME		dstyle.css	index.html	research.html	teaching.html
-flameiro@m-gvfjf3pqx3 falseiftrue.github.io % nvim index.html
-zsh: command not found: nvim
-flameiro@m-gvfjf3pqx3 falseiftrue.github.io % cd ..
-flameiro@m-gvfjf3pqx3 ~ % ls
-Desktop			Downloads		Library			Music			Pictures
-Documents		falseiftrue.github.io	Movies			Personal and Private	Public
-flameiro@m-gvfjf3pqx3 ~ % brew install nvim
-zsh: command not found: brew
-flameiro@m-gvfjf3pqx3 ~ % /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-==> Checking for `sudo` access (which may request your password)...
-Password:
-==> This script will install:
-/opt/homebrew/bin/brew
-/opt/homebrew/share/doc/homebrew
-/opt/homebrew/share/man/man1/brew.1
-/opt/homebrew/share/zsh/site-functions/_brew
-/opt/homebrew/etc/bash_completion.d/brew
-/opt/homebrew
-==> The following existing directories will be made group writable:
-/opt/homebrew/etc/bash_completion.d
-/opt/homebrew/lib/pkgconfig
-/opt/homebrew/share/aclocal
-/opt/homebrew/share/doc
-/opt/homebrew/share/info
-/opt/homebrew/share/locale
-/opt/homebrew/share/man
-/opt/homebrew/share/man/man1
-/opt/homebrew/share/man/man3
-/opt/homebrew/share/man/man5
-/opt/homebrew/share/man/man7
-/opt/homebrew/share/man/man8
-/opt/homebrew/bin/brew
-==> The following existing directories will have their owner set to flameiro:
-/opt/homebrew/etc/bash_completion.d
-/opt/homebrew/lib/pkgconfig
-/opt/homebrew/share/aclocal
-/opt/homebrew/share/doc
-/opt/homebrew/share/info
-/opt/homebrew/share/locale
-/opt/homebrew/share/man
-/opt/homebrew/share/man/man1
-/opt/homebrew/share/man/man3
-/opt/homebrew/share/man/man5
-/opt/homebrew/share/man/man7
-/opt/homebrew/share/man/man8
-/opt/homebrew/bin/brew
-
-Press RETURN/ENTER to continue or any other key to abort:
-==> /usr/bin/sudo /bin/chmod u+rwx /opt/homebrew/etc/bash_completion.d /opt/homebrew/lib/pkgconfig /opt/homebrew/share/aclocal /opt/homebrew/share/doc /opt/homebrew/share/info /opt/homebrew/share/locale /opt/homebrew/share/man /opt/homebrew/share/man/man1 /opt/homebrew/share/man/man3 /opt/homebrew/share/man/man5 /opt/homebrew/share/man/man7 /opt/homebrew/share/man/man8 /opt/homebrew/bin/brew
-==> /usr/bin/sudo /bin/chmod g+rwx /opt/homebrew/etc/bash_completion.d /opt/homebrew/lib/pkgconfig /opt/homebrew/share/aclocal /opt/homebrew/share/doc /opt/homebrew/share/info /opt/homebrew/share/locale /opt/homebrew/share/man /opt/homebrew/share/man/man1 /opt/homebrew/share/man/man3 /opt/homebrew/share/man/man5 /opt/homebrew/share/man/man7 /opt/homebrew/share/man/man8 /opt/homebrew/bin/brew
-==> /usr/bin/sudo /usr/sbin/chown flameiro /opt/homebrew/etc/bash_completion.d /opt/homebrew/lib/pkgconfig /opt/homebrew/share/aclocal /opt/homebrew/share/doc /opt/homebrew/share/info /opt/homebrew/share/locale /opt/homebrew/share/man /opt/homebrew/share/man/man1 /opt/homebrew/share/man/man3 /opt/homebrew/share/man/man5 /opt/homebrew/share/man/man7 /opt/homebrew/share/man/man8 /opt/homebrew/bin/brew
-==> /usr/bin/sudo /usr/sbin/chown -R flameiro:admin /opt/homebrew
-
-==> /usr/bin/sudo /bin/mkdir -p /Users/flameiro/Library/Caches/Homebrew
-==> /usr/bin/sudo /bin/chmod g+rwx /Users/flameiro/Library/Caches/Homebrew
-==> /usr/bin/sudo /usr/sbin/chown -R flameiro /Users/flameiro/Library/Caches/Homebrew
-==> Downloading and installing Homebrew...
-remote: Enumerating objects: 4817, done.
-remote: Counting objects: 100% (2556/2556), done.
-remote: Compressing objects: 100% (132/132), done.
-remote: Total 4817 (delta 2512), reused 2426 (delta 2424), pack-reused 2261 (from 3)
-==> Updating Homebrew...
-==> Downloading https://ghcr.io/v2/homebrew/portable-ruby/portable-ruby/blobs/sha256:40e7f5d7514a7e9757facdd39006f7a351d3d7986d3a228be13c8b1c3216727b
-############################################################################################################################ 100.0%
-==> Pouring portable-ruby-3.4.3.arm64_big_sur.bottle.tar.gz
-Warning: /opt/homebrew/bin is not in your PATH.
-  Instructions on how to configure your shell for Homebrew
-  can be found in the 'Next steps' section below.
-==> Installation successful!
-
-==> Homebrew has enabled anonymous aggregate formulae and cask analytics.
-Read the analytics documentation (and how to opt-out) here:
-  https://docs.brew.sh/Analytics
-No analytics data has been sent yet (nor will any be during this install run).
-
-==> Homebrew is run entirely by unpaid volunteers. Please consider donating:
-  https://github.com/Homebrew/brew#donations
-
-==> Next steps:
-- Run these commands in your terminal to add Homebrew to your PATH:
-    echo >> /Users/flameiro/.zprofile
-    echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/flameiro/.zprofile
-    eval "$(/opt/homebrew/bin/brew shellenv)"
-- Run brew help to get started
-- Further documentation:
-    https://docs.brew.sh
-
-flameiro@m-gvfjf3pqx3 ~ %
-flameiro@m-gvfjf3pqx3 ~ % brew install neovim
-zsh: command not found: brew
-flameiro@m-gvfjf3pqx3 ~ % echo >> /Users/flameiro/.zprofile
-flameiro@m-gvfjf3pqx3 ~ % echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/flameiro/.zprofile
-flameiro@m-gvfjf3pqx3 ~ % eval "$(/opt/homebrew/bin/brew shellenv)"
-flameiro@m-gvfjf3pqx3 ~ % brew install neovim
-neovim 0.10.4_1 is already installed but outdated (so it will be upgraded).
-==> Downloading https://ghcr.io/v2/homebrew/core/neovim/manifests/0.11.1
-############################################################################################################################ 100.0%
-==> Fetching dependencies for neovim: libuv, luajit and utf8proc
-==> Downloading https://ghcr.io/v2/homebrew/core/libuv/manifests/1.51.0
-############################################################################################################################ 100.0%
-==> Fetching libuv
-==> Downloading https://ghcr.io/v2/homebrew/core/libuv/blobs/sha256:916f444748e98c1e58083df123f6ff9d90d0b0af202f4da0862a5c456804d2f
-############################################################################################################################ 100.0%
-==> Downloading https://ghcr.io/v2/homebrew/core/luajit/manifests/2.1.1744318430
-############################################################################################################################ 100.0%
-==> Fetching luajit
-==> Downloading https://ghcr.io/v2/homebrew/core/luajit/blobs/sha256:72a8213363c598f8ed1bcd607ed934d591fe97f22f06bffdd8f3b97fd34c5e
-############################################################################################################################ 100.0%
-==> Downloading https://ghcr.io/v2/homebrew/core/utf8proc/manifests/2.10.0
-############################################################################################################################ 100.0%
-==> Fetching utf8proc
-==> Downloading https://ghcr.io/v2/homebrew/core/utf8proc/blobs/sha256:81533530b545ad8ebf73b33a3bdca4bd7fd79c08b43b36065f01786e3034
-############################################################################################################################ 100.0%
-==> Fetching neovim
-==> Downloading https://ghcr.io/v2/homebrew/core/neovim/blobs/sha256:371e99be7b1d20d76b2d08615156d1d2c374526baf54dffb2245a0e65eaca6
-############################################################################################################################ 100.0%
-==> Upgrading neovim
-  0.10.4_1 -> 0.11.1
-==> Installing dependencies for neovim: libuv, luajit and utf8proc
-==> Installing neovim dependency: libuv
-==> Downloading https://ghcr.io/v2/homebrew/core/libuv/manifests/1.51.0
-Already downloaded: /Users/flameiro/Library/Caches/Homebrew/downloads/25bd9f2f86d047011dc8ca247bea2e4e3e5a150e29648418d48dfca4c8c136ea--libuv-1.51.0.bottle_manifest.json
-==> Pouring libuv--1.51.0.arm64_sequoia.bottle.tar.gz
-🍺  /opt/homebrew/Cellar/libuv/1.51.0: 20 files, 1.2MB
-==> Installing neovim dependency: luajit
-==> Downloading https://ghcr.io/v2/homebrew/core/luajit/manifests/2.1.1744318430
-Already downloaded: /Users/flameiro/Library/Caches/Homebrew/downloads/4619073f105713f38f3e81ead88ae254efde33403ae1c697893e0d40f27385ca--luajit-2.1.1744318430.bottle_manifest.json
-==> Pouring luajit--2.1.1744318430.arm64_sequoia.bottle.tar.gz
-🍺  /opt/homebrew/Cellar/luajit/2.1.1744318430: 56 files, 2.1MB
-==> Installing neovim dependency: utf8proc
-==> Downloading https://ghcr.io/v2/homebrew/core/utf8proc/manifests/2.10.0
-Already downloaded: /Users/flameiro/Library/Caches/Homebrew/downloads/3056e40e6fc9df8e17e75f4a96177ac97169c0e4a3d159815b11d2073d733e45--utf8proc-2.10.0.bottle_manifest.json
-==> Pouring utf8proc--2.10.0.arm64_sequoia.bottle.tar.gz
-🍺  /opt/homebrew/Cellar/utf8proc/2.10.0: 11 files, 793.6KB
-==> Installing neovim
-==> Pouring neovim--0.11.1.arm64_sequoia.bottle.tar.gz
-🍺  /opt/homebrew/Cellar/neovim/0.11.1: 2,036 files, 26.9MB
-==> Running `brew cleanup neovim`...
-Disable this behaviour by setting HOMEBREW_NO_INSTALL_CLEANUP.
-Hide these hints with HOMEBREW_NO_ENV_HINTS (see `man brew`).
-Removing: /opt/homebrew/Cellar/neovim/0.10.4_1... (1,902 files, 29.8MB)
-flameiro@m-gvfjf3pqx3 ~ % ls
-Desktop			Downloads		Library			Music			Pictures
-Documents		falseiftrue.github.io	Movies			Personal and Private	Public
-flameiro@m-gvfjf3pqx3 ~ % cd falseiftrue.github.io/
-flameiro@m-gvfjf3pqx3 falseiftrue.github.io % ls
-books.html	colors.js	images		README.md	style.css
-CNAME		dstyle.css	index.html	research.html	teaching.html
-flameiro@m-gvfjf3pqx3 falseiftrue.github.io % nvim index.html
-flameiro@m-gvfjf3pqx3 falseiftrue.github.io % nvim research.html
-flameiro@m-gvfjf3pqx3 falseiftrue.github.io % nvim teaching.html
-flameiro@m-gvfjf3pqx3 falseiftrue.github.io % git help
-usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]
-           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
-           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]
-           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
-           [--super-prefix=<path>] [--config-env=<name>=<envvar>]
-           <command> [<args>]
-
-These are common Git commands used in various situations:
-
-start a working area (see also: git help tutorial)
-   clone     Clone a repository into a new directory
-   init      Create an empty Git repository or reinitialize an existing one
-
-work on the current change (see also: git help everyday)
-   add       Add file contents to the index
-   mv        Move or rename a file, a directory, or a symlink
-   restore   Restore working tree files
-   rm        Remove files from the working tree and from the index
-
-examine the history and state (see also: git help revisions)
-   bisect    Use binary search to find the commit that introduced a bug
-   diff      Show changes between commits, commit and working tree, etc
-   grep      Print lines matching a pattern
-   log       Show commit logs
-   show      Show various types of objects
-   status    Show the working tree status
-
-grow, mark and tweak your common history
-   branch    List, create, or delete branches
-   commit    Record changes to the repository
-   merge     Join two or more development histories together
-   rebase    Reapply commits on top of another base tip
-   reset     Reset current HEAD to the specified state
-   switch    Switch branches
-   tag       Create, list, delete or verify a tag object signed with GPG
-
-collaborate (see also: git help workflows)
-   fetch     Download objects and refs from another repository
-   pull      Fetch from and integrate with another repository or a local branch
-   push      Update remote refs along with associated objects
-
-'git help -a' and 'git help -g' list available subcommands and some
-concept guides. See 'git help <command>' or 'git help <concept>'
-to read about a specific subcommand or concept.
-See 'git help git' for an overview of the system.
-flameiro@m-gvfjf3pqx3 falseiftrue.github.io % git add
-Nothing specified, nothing added.
-hint: Maybe you wanted to say 'git add .'?
-hint: Turn this message off by running
-hint: "git config advice.addEmptyPathspec false"
-flameiro@m-gvfjf3pqx3 falseiftrue.github.io % git add .
-flameiro@m-gvfjf3pqx3 falseiftrue.github.io % git commit -m "updates to link format"
-[main b1b9922] updates to link format
- Committer: Francesca Lameiro <flameiro@m-gvfjf3pqx3.local>
-Your name and email address were configured automatically based
-on your username and hostname. Please check that they are accurate.
-You can suppress this message by setting them explicitly. Run the
-following command and follow the instructions in your editor to edit
-your configuration file:
-
-    git config --global --edit
-
-After doing this, you may fix the identity used for this commit with:
-
-    git commit --amend --reset-author
-
- 3 files changed, 12 insertions(+), 12 deletions(-)
-flameiro@m-gvfjf3pqx3 falseiftrue.github.io % git push origin main
-Username for 'https://github.com': falseiftrue
-Password for 'https://falseiftrue@github.com':
-remote: Support for password authentication was removed on August 13, 2021.
-remote: Please see https://docs.github.com/get-started/getting-started-with-git/about-remote-repositories#cloning-with-https-urls for information on currently recommended modes of authentication.
-fatal: Authentication failed for 'https://github.com/falseiftrue/falseiftrue.github.io.git/'
-flameiro@m-gvfjf3pqx3 falseiftrue.github.io % cd ..
-flameiro@m-gvfjf3pqx3 ~ % brew install --cask git-credential-manager
-==> Downloading https://github.com/git-ecosystem/git-credential-manager/releases/download/v2.6.1/gcm-osx-arm64-2.6.1.pkg
-==> Downloading from https://objects.githubusercontent.com/github-production-release-asset-2e65be/158405551/6be445d4-160f-43a5-a17c
-############################################################################################################################ 100.0%
-==> Installing Cask git-credential-manager
-==> Running installer for git-credential-manager with sudo; the password may be necessary.
-Password:
-Sorry, try again.
-Password:
-installer: Package name is Git Credential Manager
-installer: Installing at base path /
-installer: The install was successful.
-🍺  git-credential-manager was successfully installed!
-flameiro@m-gvfjf3pqx3 ~ % cd falseiftrue.github.io
-flameiro@m-gvfjf3pqx3 falseiftrue.github.io % ls
-books.html	colors.js	images		README.md	style.css
-CNAME		dstyle.css	index.html	research.html	teaching.html
-flameiro@m-gvfjf3pqx3 falseiftrue.github.io % git status
-On branch main
-Your branch is ahead of 'origin/main' by 1 commit.
-  (use "git push" to publish your local commits)
-
-nothing to commit, working tree clean
-flameiro@m-gvfjf3pqx3 falseiftrue.github.io % git push origin main
-info: please complete authentication in your browser...
-Enumerating objects: 9, done.
-Counting objects: 100% (9/9), done.
-Delta compression using up to 8 threads
-Compressing objects: 100% (5/5), done.
-Writing objects: 100% (5/5), 512 bytes | 512.00 KiB/s, done.
-Total 5 (delta 4), reused 0 (delta 0), pack-reused 0
-remote: Resolving deltas: 100% (4/4), completed with 4 local objects.
-To https://github.com/falseiftrue/falseiftrue.github.io.git
-   fd5a7fa..b1b9922  main -> main
-flameiro@m-gvfjf3pqx3 falseiftrue.github.io % nvim index.html
-flameiro@m-gvfjf3pqx3 falseiftrue.github.io % nvim research.html
-flameiro@m-gvfjf3pqx3 falseiftrue.github.io % nvim teaching.html
-flameiro@m-gvfjf3pqx3 falseiftrue.github.io % git add .
-flameiro@m-gvfjf3pqx3 falseiftrue.github.io % git commit -m ""
-Aborting commit due to empty commit message.
-flameiro@m-gvfjf3pqx3 falseiftrue.github.io % git commit -m "link updates"
-[main 6d06bbb] link updates
- Committer: Francesca Lameiro <flameiro@m-gvfjf3pqx3.local>
-Your name and email address were configured automatically based
-on your username and hostname. Please check that they are accurate.
-You can suppress this message by setting them explicitly:
-
-    git config --global user.name "Your Name"
-    git config --global user.email you@example.com
-
-After doing this, you may fix the identity used for this commit with:
-
-    git commit --amend --reset-author
-
- 3 files changed, 3 insertions(+), 3 deletions(-)
-flameiro@m-gvfjf3pqx3 falseiftrue.github.io % git push origin main
-Enumerating objects: 9, done.
-Counting objects: 100% (9/9), done.
-Delta compression using up to 8 threads
-Compressing objects: 100% (5/5), done.
-Writing objects: 100% (5/5), 455 bytes | 455.00 KiB/s, done.
-Total 5 (delta 4), reused 0 (delta 0), pack-reused 0
-remote: Resolving deltas: 100% (4/4), completed with 4 local objects.
-To https://github.com/falseiftrue/falseiftrue.github.io.git
-   b1b9922..6d06bbb  main -> main
-flameiro@m-gvfjf3pqx3 falseiftrue.github.io % nvim index.html
-flameiro@m-gvfjf3pqx3 falseiftrue.github.io % nvim research.html
-flameiro@m-gvfjf3pqx3 falseiftrue.github.io % nvim teaching.html
-flameiro@m-gvfjf3pqx3 falseiftrue.github.io % ls
-books.html	colors.js	images		README.md	style.css
-CNAME		dstyle.css	index.html	research.html	teaching.html
-flameiro@m-gvfjf3pqx3 falseiftrue.github.io % cd style.css
-cd: not a directory: style.css
-flameiro@m-gvfjf3pqx3 falseiftrue.github.io % nvim style.css
-flameiro@m-gvfjf3pqx3 falseiftrue.github.io % nvim teaching.html
-flameiro@m-gvfjf3pqx3 falseiftrue.github.io % git add .
-flameiro@m-gvfjf3pqx3 falseiftrue.github.io % git commit -m "font updates"
-[main baf04ac] font updates
- Committer: Francesca Lameiro <flameiro@m-gvfjf3pqx3.local>
-Your name and email address were configured automatically based
-on your username and hostname. Please check that they are accurate.
-You can suppress this message by setting them explicitly:
-
-    git config --global user.name "Your Name"
-    git config --global user.email you@example.com
-
-After doing this, you may fix the identity used for this commit with:
-
-    git commit --amend --reset-author
-
- 4 files changed, 4 insertions(+), 1 deletion(-)
-flameiro@m-gvfjf3pqx3 falseiftrue.github.io % git push origin main
-Enumerating objects: 11, done.
-Counting objects: 100% (11/11), done.
-Delta compression using up to 8 threads
-Compressing objects: 100% (6/6), done.
-Writing objects: 100% (6/6), 670 bytes | 670.00 KiB/s, done.
-Total 6 (delta 5), reused 0 (delta 0), pack-reused 0
-remote: Resolving deltas: 100% (5/5), completed with 5 local objects.
-To https://github.com/falseiftrue/falseiftrue.github.io.git
-   6d06bbb..baf04ac  main -> main
-flameiro@m-gvfjf3pqx3 falseiftrue.github.io % nvim style.css
-flameiro@m-gvfjf3pqx3 falseiftrue.github.io % nvim index.html
-flameiro@m-gvfjf3pqx3 falseiftrue.github.io % nvim research.html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -412,22 +14,42 @@ flameiro@m-gvfjf3pqx3 falseiftrue.github.io % nvim research.html
     <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap" rel="stylesheet">
     <link rel='stylesheet' href='//cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack.css'>
     <link rel="icon" href="/images/icon.png">
-    <title>Francesca Lameiro: TIDEs</title>
+    <title>Francesca Lameiro: Home</title>
 </head>
 <body>
     <div id="container">
         <nav>
-            <a href="/">home</a>
-            <a href="research">research</a>
+            <a class="active" href="/">home</a>
+            <a href="research">research</a> 
             <a href="teaching">teaching</a>
             <!-- <a href="books.html">books</a> -->
         </nav>
         <div id="flexiana">
             <img id="portrait" src="/images/portrait/francesca_green.jpg" alt="Francesca in a green hoodie">
-
+    
             <div id="box">
                     <h1>Francesca Lameiro</h1>
                     <div class="sub">PhD student @ <a target="_blank" rel="noreferer" href="https://www.si.umich.edu/programs/phd-information">UMSI</a></div>
             </div>
-index.html                                                                                                     1,1            Top
+    
+        </div>
+
+        <div class="text-container">
+            <p>Page under construction.</p>
+        </div>
+        <div class="footer-container">
+            <div class="button-container">
+                <button id="greenButton">&nbsp;</button>
+                <button id="blueButton">&nbsp;</button>
+                <button id="yellowButton">&nbsp;</button>
+                <button id="pinkButton">&nbsp;</button>
+            </div>
+            <footer>
+                <p>made by <a target="_blank" rel="noreferer" href="https://github.com/falseiftrue/falseiftrue.github.io/tree/main">FCL</a></p>
+            </footer>
+        </div>
+    </div>
+    <script src="colors.js"></script>
+</body>
+</html>
 

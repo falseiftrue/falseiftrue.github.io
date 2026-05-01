@@ -194,6 +194,16 @@ blockquote {
 
 #news.collapsed {
     overflow: hidden;
+    border-color: transparent;
+    padding: 0;
+}
+
+#news.collapsed h3 {
+    position: relative;
+    top: 0;
+    margin: 0;
+    border-bottom: none;
+    border-radius: 5px;
 }
 
 #news h3 {
@@ -208,6 +218,7 @@ blockquote {
     font-size: 10pt;
     text-transform: uppercase;
     letter-spacing: 0.05em;
+    white-space: nowrap;
     cursor: pointer;
     user-select: none;
 }

@@ -41,49 +41,60 @@ const newsSection = document.getElementById('news');
 if (newsSection) {
     const h3 = newsSection.querySelector('h3');
     const DURATION = 400;
-    let expandedH = null;
-    let expandedW = null;
+    let expandedH, expandedW, collapsedW, collapsedH;
 
     function lock(h, w) {
         newsSection.style.height = h + 'px';
         newsSection.style.width = w + 'px';
         newsSection.style.flex = 'none';
-        newsSection.style.overflow = 'hidden';
     }
 
     function unlock() {
         newsSection.style.height = '';
         newsSection.style.width = '';
         newsSection.style.flex = '';
-        newsSection.style.overflow = '';
     }
+
+    // Disable transitions for measurement
+    newsSection.style.transition = 'none';
+
+    // Measure expanded state
+    expandedH = newsSection.offsetHeight;
+    expandedW = newsSection.offsetWidth;
+
+    // Measure collapsed state: hide the ul so list items don't inflate fit-content,
+    // leaving only the h3 to determine the button's natural width.
+    const ul = newsSection.querySelector('ul');
+    newsSection.classList.add('collapsed');
+    ul.style.display = 'none';
+    newsSection.style.flex = 'none'; // prevent flex:1 from inflating the measured height
+    newsSection.style.width = 'fit-content';
+    collapsedW = newsSection.offsetWidth + 1;
+    collapsedH = newsSection.offsetHeight;
+    newsSection.style.width = '';
+    newsSection.style.flex = '';
+    ul.style.display = '';
+
+    // Snap to collapsed with no animation, then re-enable transitions next frame
+    lock(collapsedH, collapsedW);
+    requestAnimationFrame(() => { newsSection.style.transition = ''; });
 
     function collapse() {
         expandedH = newsSection.offsetHeight;
         expandedW = newsSection.offsetWidth;
         lock(expandedH, expandedW);
-        newsSection.getBoundingClientRect();
+        newsSection.getBoundingClientRect(); // force reflow so transition fires
         newsSection.classList.add('collapsed');
-        lock(h3.offsetHeight, h3.offsetWidth);
+        lock(collapsedH, collapsedW);
     }
 
     function expand() {
-        const fromH = h3.offsetHeight;
-        const fromW = newsSection.offsetWidth;
+        lock(collapsedH, collapsedW);
         newsSection.classList.remove('collapsed');
-        lock(fromH, fromW);
         newsSection.getBoundingClientRect();
         lock(expandedH, expandedW);
         setTimeout(unlock, DURATION);
     }
-
-    // init: measure then snap to collapsed with no transition
-    newsSection.style.transition = 'none';
-    expandedH = newsSection.offsetHeight;
-    expandedW = newsSection.offsetWidth;
-    newsSection.classList.add('collapsed');
-    lock(h3.offsetHeight, h3.offsetWidth);
-    requestAnimationFrame(() => { newsSection.style.transition = ''; });
 
     h3.addEventListener('click', () => {
         if (newsSection.classList.contains('collapsed')) expand();

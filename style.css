@@ -100,7 +100,7 @@ nav .active:hover {
   
 h1 {
     font-family: "Archivo Black";
-    font-size: max(2.66vw, 20pt);
+    font-size: clamp(20pt, 2.66vw, 28pt);
     margin: 2px;
 }
 
@@ -124,7 +124,7 @@ img {
     border-radius: 5px;
     display: block;
     flex-basis: auto;
-    align-self: auto;
+    align-self: flex-start;
 }
 
 a {
@@ -202,6 +202,7 @@ blockquote {
     position: relative;
     top: 0;
     margin: 0;
+    padding-right: 18px;
     border-bottom: none;
     border-radius: 5px;
 }

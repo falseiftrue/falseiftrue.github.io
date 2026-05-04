@@ -24,16 +24,9 @@ const colorHex = {
     yellow: '#aa7e05',
 };
 
-function buildCursor(hex) {
-    const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path d="M0,0 L0,16 L4.5,11.5 L7.5,18 L9.5,17 L6.5,10.5 L12,10.5 Z" fill="${hex}" stroke="black" stroke-width="1.2" stroke-linejoin="round"/></svg>`;
-    const encoded = encodeURIComponent(svg);
-    return `url("data:image/svg+xml,${encoded}") 0 0, auto`;
-}
-
 function changeColor(color) {
     var newColor = 'var(--' + color + ')';
     document.documentElement.style.setProperty('--accent', newColor);
-    document.body.style.cursor = buildCursor(colorHex[color] || '#034903');
     localStorage.setItem('accentColor', color);
 }
 
@@ -69,7 +62,7 @@ if (newsSection) {
     ul.style.display = 'none';
     newsSection.style.flex = 'none'; // prevent flex:1 from inflating the measured height
     newsSection.style.width = 'fit-content';
-    collapsedW = newsSection.offsetWidth + 1;
+    collapsedW = Math.ceil(newsSection.getBoundingClientRect().width);
     collapsedH = newsSection.offsetHeight;
     newsSection.style.width = '';
     newsSection.style.flex = '';

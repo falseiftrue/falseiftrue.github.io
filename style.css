@@ -42,6 +42,7 @@ body {
 
 .text-container {
     line-height: 1.5;
+    margin-top: 12px;
 }
 
 nav {
@@ -135,6 +136,7 @@ a {
     border-radius: 3px;
     padding: 1px;
     text-decoration: double;
+    cursor: pointer;
 }
 
 a:hover {
@@ -202,7 +204,6 @@ blockquote {
     position: relative;
     top: 0;
     margin: 0;
-    padding-right: 18px;
     border-bottom: none;
     border-radius: 5px;
 }
@@ -256,6 +257,145 @@ blockquote {
 }
 
 
+#projects {
+    flex: 1;
+    overflow-y: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+    align-content: flex-start;
+    min-height: 0;
+}
+
+.project-card {
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 8px 10px;
+    width: calc(50% - 5px);
+    box-sizing: border-box;
+    position: relative;
+    transition: border-color 0.2s ease;
+}
+
+.project-card:has(.card-main-link):hover {
+    border-color: var(--accent);
+}
+
+.card-main-link {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: none;
+    border: none;
+    padding: 0;
+    border-radius: inherit;
+}
+
+.card-main-link:hover {
+    background: none;
+    color: inherit;
+    border: none;
+}
+
+
+.project-card:has(.card-main-link) .project-tag::after {
+    content: ' ▸';
+    color: var(--accent);
+    font-family: "Hack", "Inconsolata", monospace;
+    font-weight: normal;
+}
+
+.project-card img {
+    width: 100%;
+    height: 120px;
+    aspect-ratio: auto;
+    object-fit: cover;
+    border-radius: 5px;
+    display: block;
+    align-self: auto;
+    margin-bottom: 6px;
+}
+
+.project-bottom {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 8px;
+    margin-top: 4px;
+}
+
+.project-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    flex: 1;
+    min-width: 0;
+}
+
+.project-info h3 {
+    margin: 0;
+}
+
+.project-title {
+    font-family: "Archivo Black";
+    font-size: 10pt;
+    line-height: 1.1;
+}
+
+.project-title-individual {
+    font-family: "Archivo Black";
+    font-size: 15pt;
+    line-height: 1.1;
+}
+
+.project-tag {
+    font-family: "Hack", "Inconsolata", "DM Mono", monospace;
+    font-size: 8pt;
+    white-space: nowrap;
+    color: inherit;
+}
+
+.project-links {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    flex-shrink: 0;
+}
+
+.project-card .project-links {
+    position: relative;
+    z-index: 2;
+}
+
+.project-links a {
+    text-align: center;
+    font-size: 10pt;
+}
+
+
+.detail-img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: auto;
+    border-radius: 5px;
+    align-self: auto;
+    margin-bottom: 8px;
+}
+
+.detail-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 6px;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+}
+
+.detail-links a {
+    font-size: 10pt;
+}
+
 .footer-container {
     display: flex;
     flex-direction: column;
@@ -293,8 +433,13 @@ button {
     padding: 0;
 }
 
-h2,h3 {
+h2 {
     font-family: "Archivo Black";
+}
+
+h3 {
+    font-family: "Hack", "Inconsolata", "DM Mono", monospace;
+    font-weight: bolder;
 }
 
 #portrait {
